@@ -1,0 +1,8 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="400" height="300" fill="#F8F9FA"/>
+<rect x="50" y="50" width="300" height="200" fill="#6366F1" rx="10"/>
+<circle cx="100" cy="150" r="30" fill="white"/>
+<circle cx="200" cy="150" r="30" fill="white"/>
+<circle cx="300" cy="150" r="30" fill="white"/>
+<text x="200" y="280" text-anchor="middle" fill="#666" font-family="Arial" font-size="12">Veterinary Clinic</text>
+</svg>

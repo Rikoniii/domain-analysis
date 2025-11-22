@@ -1,0 +1,46 @@
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="600" height="400" fill="#F8F9FA"/>
+<defs>
+  <linearGradient id="buildingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" style="stop-color:#E8F5E8;stop-opacity:1" />
+    <stop offset="100%" style="stop-color:#C8E6C9;stop-opacity:1" />
+  </linearGradient>
+  <linearGradient id="roofGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
+    <stop offset="100%" style="stop-color:#2E7D32;stop-opacity:1" />
+  </linearGradient>
+</defs>
+<!-- Main building -->
+<rect x="150" y="200" width="300" height="150" fill="url(#buildingGradient)" stroke="#4CAF50" stroke-width="2"/>
+<!-- Roof -->
+<polygon points="120,200 300,120 480,200" fill="url(#roofGradient)"/>
+<!-- Door -->
+<rect x="270" y="280" width="60" height="70" fill="#8D6E63" stroke="#5D4037" stroke-width="2"/>
+<!-- Door handle -->
+<circle cx="315" cy="315" r="3" fill="#FFD54F"/>
+<!-- Windows -->
+<rect x="180" y="220" width="40" height="40" fill="#81C784" stroke="#4CAF50" stroke-width="2"/>
+<rect x="380" y="220" width="40" height="40" fill="#81C784" stroke="#4CAF50" stroke-width="2"/>
+<!-- Window frames -->
+<line x1="200" y1="220" x2="200" y2="260" stroke="#4CAF50" stroke-width="2"/>
+<line x1="180" y1="240" x2="220" y2="240" stroke="#4CAF50" stroke-width="2"/>
+<line x1="400" y1="220" x2="400" y2="260" stroke="#4CAF50" stroke-width="2"/>
+<line x1="380" y1="240" x2="420" y2="240" stroke="#4CAF50" stroke-width="2"/>
+<!-- Sign -->
+<rect x="250" y="170" width="100" height="30" fill="#FFD54F" stroke="#FF8F00" stroke-width="2" rx="5"/>
+<text x="300" y="190" text-anchor="middle" fill="#E65100" font-family="Arial" font-size="12" font-weight="bold">ДОМ ЛАП</text>
+<!-- Trees -->
+<ellipse cx="100" cy="300" rx="25" ry="40" fill="#4CAF50"/>
+<ellipse cx="500" cy="300" rx="25" ry="40" fill="#4CAF50"/>
+<!-- Tree trunks -->
+<rect x="95" y="340" width="10" height="30" fill="#8D6E63"/>
+<rect x="495" y="340" width="10" height="30" fill="#8D6E63"/>
+<!-- Heart above building -->
+<path d="M 300 100 C 300 95, 295 90, 290 90 C 285 90, 280 95, 280 100 C 280 105, 290 115, 300 125 C 310 115, 320 105, 320 100 C 320 95, 315 90, 310 90 C 305 90, 300 95, 300 100 Z" fill="#FF6B6B"/>
+<!-- Paws around -->
+<circle cx="80" cy="120" r="8" fill="#4CAF50" opacity="0.7"/>
+<circle cx="520" cy="140" r="8" fill="#4CAF50" opacity="0.7"/>
+<circle cx="70" cy="150" r="6" fill="#4CAF50" opacity="0.5"/>
+<circle cx="530" cy="110" r="6" fill="#4CAF50" opacity="0.5"/>
+<text x="300" y="380" text-anchor="middle" fill="#666" font-family="Arial" font-size="16" font-weight="bold">Приют для животных</text>
+</svg>

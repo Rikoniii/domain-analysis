@@ -1,0 +1,68 @@
+{
+  "name": "Дом Лап - Приют для животных",
+  "short_name": "Дом Лап",
+  "description": "Приют для животных, где каждое существо получает шанс на счастливую жизнь",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4CAF50",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "images/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["lifestyle", "social", "utilities"],
+  "lang": "ru",
+  "dir": "ltr",
+  "scope": "/",
+  "screenshots": [
+    {
+      "src": "images/screenshot1.svg",
+      "sizes": "1280x720",
+      "type": "image/svg+xml",
+      "form_factor": "wide"
+    },
+    {
+      "src": "images/screenshot2.svg",
+      "sizes": "750x1334",
+      "type": "image/svg+xml",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Сделать пожертвование",
+      "short_name": "Донат",
+      "description": "Быстро сделать пожертвование",
+      "url": "/donate.html",
+      "icons": [
+        {
+          "src": "images/donate-icon.svg",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Наши животные",
+      "short_name": "Животные",
+      "description": "Посмотреть животных для усыновления",
+      "url": "/animals.html",
+      "icons": [
+        {
+          "src": "images/animals-icon.svg",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}

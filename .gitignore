@@ -1,0 +1,37 @@
+# Игнорировать локальный README.md (в репозитории уже есть свой)
+README.md
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Файлы редакторов
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Временные файлы
+*.tmp
+*.log
+*.cache
+
+# Node modules (если будут использоваться)
+node_modules/
+package-lock.json
+
+# Python (если будет использоваться)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+
+# Служебные файлы
+*.bak
+*.backup
+

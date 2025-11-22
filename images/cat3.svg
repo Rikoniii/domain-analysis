@@ -1,0 +1,44 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="300" height="300" fill="#F8F9FA"/>
+<defs>
+  <linearGradient id="barsikGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
+    <stop offset="100%" style="stop-color:#2E7D32;stop-opacity:1" />
+  </linearGradient>
+</defs>
+<!-- Cat body -->
+<ellipse cx="150" cy="180" rx="38" ry="48" fill="url(#barsikGradient)"/>
+<!-- Cat head -->
+<circle cx="150" cy="125" r="30" fill="url(#barsikGradient)"/>
+<!-- Cat ears -->
+<polygon points="130,105 138,85 146,105" fill="url(#barsikGradient)"/>
+<polygon points="154,105 162,85 170,105" fill="url(#barsikGradient)"/>
+<!-- Inner ears -->
+<polygon points="133,100 138,90 142,100" fill="#C8E6C9"/>
+<polygon points="158,100 162,90 167,100" fill="#C8E6C9"/>
+<!-- Cat eyes -->
+<ellipse cx="140" cy="120" rx="3" ry="5" fill="white"/>
+<ellipse cx="160" cy="120" rx="3" ry="5" fill="white"/>
+<ellipse cx="140" cy="120" rx="1.5" ry="3" fill="#4CAF50"/>
+<ellipse cx="160" cy="120" rx="1.5" ry="3" fill="#4CAF50"/>
+<!-- Cat nose -->
+<polygon points="150,130 146,134 154,134" fill="#C8E6C9"/>
+<!-- Cat mouth -->
+<path d="M 150 134 Q 146 138 142 136" stroke="black" stroke-width="1" fill="none"/>
+<path d="M 150 134 Q 154 138 158 136" stroke="black" stroke-width="1" fill="none"/>
+<!-- Cat whiskers -->
+<path d="M 135 129 L 128 125" stroke="black" stroke-width="0.8"/>
+<path d="M 135 133 L 128 133" stroke="black" stroke-width="0.8"/>
+<path d="M 165 129 L 172 125" stroke="black" stroke-width="0.8"/>
+<path d="M 165 133 L 172 133" stroke="black" stroke-width="0.8"/>
+<!-- Cat tail -->
+<path d="M 188 180 Q 200 160 208 190 Q 200 210 188 200" fill="url(#barsikGradient)"/>
+<!-- Paws -->
+<circle cx="130" cy="215" r="5" fill="url(#barsikGradient)"/>
+<circle cx="150" cy="220" r="5" fill="url(#barsikGradient)"/>
+<circle cx="170" cy="215" r="5" fill="url(#barsikGradient)"/>
+<!-- Playful symbol -->
+<circle cx="150" cy="250" r="12" fill="#4CAF50" opacity="0.3"/>
+<text x="150" y="255" text-anchor="middle" fill="#2E7D32" font-family="Arial" font-size="10">🎾</text>
+<text x="150" y="275" text-anchor="middle" fill="#666" font-family="Arial" font-size="14" font-weight="bold">Барсик</text>
+</svg>
