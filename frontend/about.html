@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>О приюте - Дом Лап</title>
+    <link rel="stylesheet" href="css/style.css?v=2.1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/svg+xml" href="images/icon-192.svg">
+    <link rel="shortcut icon" href="images/icon-192.svg">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="index.html" class="logo" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
+                    <img src="images/logo.svg" alt="Дом Лап" class="logo-img">
+                    <span class="logo-text">Дом Лап</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link" data-translate="nav.home">Главная</a></li>
+                    <li><a href="animals.html" class="nav-link" data-translate="nav.animals">Наши животные</a></li>
+                    <li><a href="news.html" class="nav-link" data-translate="nav.news">Новости</a></li>
+                    <li><a href="help.html" class="nav-link" data-translate="nav.help">Как помочь</a></li>
+                    <li><a href="about.html" class="nav-link active" data-translate="nav.about">О приюте</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="lang-switcher" id="langSwitcher" title="Переключить язык" data-translate-title="common.language">RU</button>
+                    <button class="theme-switcher" id="themeSwitcher" title="Переключить тему"><span>☀️</span></button>
+                    <a href="donate.html" class="btn btn-primary" data-translate="nav.donate">Сделать пожертвование</a>
+                    <a href="profile.html" class="nav-link" data-translate="nav.profile">Личный кабинет</a>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 
+        Блок "Заголовок страницы" (Page Header):
+        Заголовок страницы "О приюте" с названием и кратким описанием содержимого страницы.
+    -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title" data-translate="about.pageTitle">О приюте "Дом Лап"</h1>
+            <p class="page-subtitle" data-translate="about.pageSubtitle">Наша история, миссия и команда</p>
+        </div>
+    </section>
+
+    <!-- 
+        Блок "Миссия приюта" (Mission Section):
+        Подробное описание миссии приюта с основными ценностями. Содержит текстовое описание
+        миссии, три ключевые ценности (любовь, защита, сообщество) и иллюстрацию.
+    -->
+    <section class="mission-section">
+        <div class="container">
+            <div class="mission-content">
+                <!-- Централизованный контент -->
+                <div class="mission-text-centered">
+                    <h2 class="mission-title" data-translate="about.missionTitle">Наша миссия</h2>
+                    <p class="mission-description-centered" data-translate="about.missionDescription">
+                        Мы верим, что каждое животное заслуживает любви, заботы и дома. 
+                        Наша миссия — спасать бездомных животных, лечить их, социализировать 
+                        и находить им любящих хозяев. Мы работаем для того, чтобы в мире 
+                        стало меньше страданий и больше счастливых хвостов.
+                    </p>
+                    <!-- Три основные ценности приюта -->
+                    <div class="mission-values-grid">
+                        <div class="value-card">
+                            <div class="value-icon">❤️</div>
+                            <h3 data-translate="about.valueLove">Любовь</h3>
+                            <p data-translate="about.valueLoveDesc">Каждое животное получает безграничную любовь и внимание</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">🛡️</div>
+                            <h3 data-translate="about.valueProtection">Защита</h3>
+                            <p data-translate="about.valueProtectionDesc">Мы защищаем права животных и их благополучие</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">🤝</div>
+                            <h3 data-translate="about.valueCommunity">Сообщество</h3>
+                            <p data-translate="about.valueCommunityDesc">Объединяем людей, которые хотят помочь животным</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+        Блок "История приюта" (History Section):
+        Хронология развития приюта с момента основания до настоящего времени.
+        Показывает ключевые события и достижения в виде временной шкалы.
+    -->
+    <section class="history-section">
+        <div class="container">
+            <h2 class="section-title" data-translate="about.historyTitle">Наша история</h2>
+            <!-- Временная шкала с ключевыми событиями -->
+            <div class="timeline">
+                <!-- Событие 2019: основание приюта -->
+                <div class="timeline-item">
+                    <div class="timeline-date">2019</div>
+                    <div class="timeline-content">
+                        <h3 data-translate="about.history2019">Основание приюта</h3>
+                        <p data-translate="about.history2019Desc">Группа энтузиастов создала небольшой приют для бездомных животных в Москве</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2020</div>
+                    <div class="timeline-content">
+                        <h3 data-translate="about.history2020">Первые спасения</h3>
+                        <p data-translate="about.history2020Desc">Мы спасли первых 20 животных и нашли им любящие дома</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2021</div>
+                    <div class="timeline-content">
+                        <h3 data-translate="about.history2021">Расширение</h3>
+                        <p data-translate="about.history2021Desc">Открыли второй корпус и увеличили количество мест до 50</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2022</div>
+                    <div class="timeline-content">
+                        <h3 data-translate="about.history2022">Ветеринарная клиника</h3>
+                        <p data-translate="about.history2022Desc">Построили собственную ветеринарную клинику для лечения животных</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-content">
+                        <h3 data-translate="about.history2023">100+ спасений</h3>
+                        <p data-translate="about.history2023Desc">Достигли отметки в 100 спасенных животных</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <h3 data-translate="about.history2024">Настоящее время</h3>
+                        <p data-translate="about.history2024Desc">Продолжаем спасать жизни и находить дома для наших питомцев</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+        Блок "Команда приюта" (Team Section):
+        Представление ключевых сотрудников приюта. Каждая карточка содержит фотографию,
+        имя, должность и краткое описание профессионального опыта сотрудника.
+    -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title" data-translate="about.teamTitle">Наша команда</h2>
+            <!-- Сетка с карточками сотрудников -->
+            <div class="team-grid">
+                <!-- Карточка первого сотрудника: директор -->
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team1.svg" alt="Анна Петрова Васильевна">
+                    </div>
+                    <div class="member-info">
+                        <h3>Анна Петрова Васильевна</h3>
+                        <p class="member-role" data-translate="about.teamDirector">Директор приюта</p>
+                        <p class="member-description" data-translate="about.teamDirectorDesc">Работает с животными уже 10 лет. Окончила ветеринарный факультет МГУ.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team2.svg" alt="Михаил Иванов">
+                    </div>
+                    <div class="member-info">
+                        <h3>Михаил Иванов</h3>
+                        <p class="member-role" data-translate="about.teamVet">Главный ветеринар</p>
+                        <p class="member-description" data-translate="about.teamVetDesc">Специализируется на лечении травм и инфекций у бездомных животных.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team3.svg" alt="Елена Сидорова">
+                    </div>
+                    <div class="member-info">
+                        <h3>Елена Сидорова</h3>
+                        <p class="member-role" data-translate="about.teamCoordinator">Координатор волонтеров</p>
+                        <p class="member-description" data-translate="about.teamCoordinatorDesc">Организует работу волонтеров и мероприятия приюта.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/team4.svg" alt="Алексей Козлов">
+                    </div>
+                    <div class="member-info">
+                        <h3>Алексей Козлов</h3>
+                        <p class="member-role" data-translate="about.teamSocializer">Специалист по социализации</p>
+                        <p class="member-description" data-translate="about.teamSocializerDesc">Помогает животным адаптироваться к жизни в семье.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+        Блок "Помещения приюта" (Facilities Section):
+        Описание основных помещений и инфраструктуры приюта. Показывает различные
+        зоны приюта с изображениями и описанием их назначения.
+    -->
+    <section class="facilities-section">
+        <div class="container">
+            <h2 class="section-title" data-translate="about.facilitiesTitle">Наши помещения</h2>
+            <!-- Сетка с карточками помещений -->
+            <div class="facilities-grid" id="roomsGrid">
+                <!-- Помещения будут загружены динамически -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Модальное окно для просмотра помещения -->
+    <div class="modal" id="roomDetailModal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h2 id="roomDetailTitle"></h2>
+                <button class="modal-close" onclick="closeRoomModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="room-detail-content">
+                    <!-- Слайдер изображений -->
+                    <div class="room-images-slider">
+                        <div class="room-main-image">
+                            <img id="roomMainImage" src="" alt="">
+                        </div>
+                        <div class="room-images-thumbnails" id="roomThumbnails">
+                            <!-- Миниатюры будут добавлены динамически -->
+                        </div>
+                    </div>
+                    <!-- Описание помещения -->
+                    <div class="room-detail-info">
+                        <div class="room-description" id="roomDescription"></div>
+                        <div class="room-capacity" id="roomCapacity"></div>
+                        <div class="room-features">
+                            <h3>Особенности:</h3>
+                            <ul id="roomFeaturesList"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+        Блок "Статистика достижений" (Statistics Section):
+        Демонстрация ключевых показателей работы приюта: количество спасенных животных,
+        найденных домов, волонтеров и доноров. Визуализирует успехи приюта.
+    -->
+    <section class="statistics-section">
+        <div class="container">
+            <h2 class="section-title" data-translate="about.statsTitle">Наши достижения</h2>
+            <!-- Сетка со статистическими карточками -->
+            <div class="stats-grid">
+                <!-- Карточка статистики: спасенные животные -->
+                <div class="stat-card">
+                    <div class="stat-icon">🐕</div>
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label" data-translate="about.statsSaved">Животных спасено</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🏠</div>
+                    <div class="stat-number">80+</div>
+                    <div class="stat-label" data-translate="about.statsHomes">Найдено домов</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label" data-translate="about.statsVolunteers">Волонтеров</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label" data-translate="about.statsDonors">Доноров</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+        Блок "Контакты" (Contact Section):
+        Контактная информация приюта: адрес, телефоны, email, часы работы и ссылки
+        на социальные сети. Также содержит карту или placeholder для карты с адресом.
+    -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title-centered" data-translate="about.contactTitle">Контакты</h2>
+            <div class="contact-content-modern">
+                <!-- Левая часть: контактная информация -->
+                <div class="contact-info-modern">
+                    <!-- Детали контактов: адрес, телефон, email, часы работы -->
+                    <div class="contact-details-modern">
+                        <!-- Контакт: адрес приюта -->
+                        <div class="contact-card">
+                            <div class="contact-card-icon">📍</div>
+                            <div class="contact-card-content">
+                                <h3 data-translate="about.contactAddress">Адрес</h3>
+                                <p data-translate="about.contactAddressValue">Москва, ул. Добрая, д. 1<br>м. Сокольники</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-card-icon">📞</div>
+                            <div class="contact-card-content">
+                                <h3 data-translate="about.contactPhone">Телефон</h3>
+                                <p data-translate="about.contactPhoneValue">+7 (495) 123-45-67<br>+7 (495) 123-45-68</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-card-icon">📧</div>
+                            <div class="contact-card-content">
+                                <h3 data-translate="about.contactEmail">Email</h3>
+                                <p data-translate="about.contactEmailValue">info@domlap.ru<br>volunteer@domlap.ru</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-card-icon">🕐</div>
+                            <div class="contact-card-content">
+                                <h3 data-translate="about.contactHours">Часы работы</h3>
+                                <p data-translate="about.contactHoursValue">Пн-Вс: 9:00 - 19:00<br>Экскурсии: по записи</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links-modern">
+                        <h3 data-translate="about.contactSocial">Мы в социальных сетях</h3>
+                        <div class="social-buttons-modern">
+                            <a href="#" class="social-btn">VK</a>
+                            <a href="#" class="social-btn">Telegram</a>
+                            <a href="#" class="social-btn">Instagram</a>
+                            <a href="#" class="social-btn">YouTube</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Правая часть: карта -->
+                <div class="contact-map-modern">
+                    <div class="map-wrapper">
+                        <div id="yandex-map"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title" data-translate="about.ctaTitle">Присоединяйтесь к нам!</h2>
+                <p class="cta-text" data-translate="about.ctaText">Помогите нам спасать больше жизней и дарить счастье животным</p>
+                <div class="cta-actions">
+                    <a href="donate.html" class="btn btn-primary btn-large" data-translate="nav.donate">Сделать пожертвование</a>
+                    <a href="help.html" class="btn btn-secondary btn-large" data-translate="cta.volunteer">Стать волонтером</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.svg" alt="Дом Лап" class="logo-img">
+                        <span class="logo-text">Дом Лап</span>
+                    </div>
+                    <p class="footer-description" data-translate="footer.description">
+                        Приют для животных, где каждое существо получает шанс на счастливую жизнь.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title" data-translate="footer.navigation">Навигация</h3>
+                    <ul class="footer-links">
+                        <li><a href="animals.html" data-translate="nav.animals">Наши животные</a></li>
+                        <li><a href="news.html" data-translate="nav.news">Новости</a></li>
+                        <li><a href="help.html" data-translate="nav.help">Как помочь</a></li>
+                        <li><a href="about.html" data-translate="nav.about">О приюте</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title" data-translate="footer.contacts">Контакты</h3>
+                    <div class="contact-info">
+                        <p>📞 +7 (495) 123-45-67</p>
+                        <p>📧 info@domlap.ru</p>
+                        <p>📍 Москва, ул. Добрая, д. 1</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title" data-translate="footer.social">Социальные сети</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">VK</a>
+                        <a href="#" class="social-link">Telegram</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-translate="footer.copyright">© 2024 Дом Лап. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Yandex Maps will be loaded dynamically if needed -->
+    <script src="js/translations.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/rooms-db.js"></script>
+    <script src="js/about.js"></script>
+</body>
+</html>
+

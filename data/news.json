@@ -1,0 +1,89 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "title": "Новый корпус приюта открыт!",
+      "titleEn": "New Shelter Building Opened!",
+      "date": "2024-12-20",
+      "category": "События",
+      "categoryEn": "Events",
+      "image": "news-featured.svg",
+      "excerpt": "Благодаря вашей поддержке мы смогли построить новый корпус для наших питомцев. Теперь у нас есть больше места для спасенных животных и улучшенные условия содержания.",
+      "excerptEn": "Thanks to your support, we were able to build a new building for our pets. Now we have more space for rescued animals and improved living conditions.",
+      "content": "Благодаря вашей невероятной поддержке и пожертвованиям, мы смогли реализовать давнюю мечту - построить новый корпус для наших питомцев. Этот проект стал возможным благодаря каждому из вас, кто верил в нашу миссию и помогал нам финансово.\n\nНовый корпус включает в себя:\n• Просторные вольеры для собак с индивидуальными выгулами\n• Отдельные помещения для кошек с игровыми зонами\n• Современный ветеринарный кабинет с новейшим оборудованием\n• Карантинную зону для новых поступлений\n• Комнаты для волонтеров и посетителей\n\nТеперь у нас есть возможность принять еще больше животных, нуждающихся в помощи. Улучшенные условия содержания позволят нашим питомцам чувствовать себя комфортнее, пока они ждут своих будущих хозяев.\n\nМы безмерно благодарны каждому, кто внес свой вклад в этот проект. Вместе мы делаем мир добрее для наших четвероногих друзей!",
+      "contentEn": "Thanks to your incredible support and donations, we were able to realize a long-standing dream - to build a new building for our pets. This project became possible thanks to each of you who believed in our mission and helped us financially.\n\nThe new building includes:\n• Spacious dog kennels with individual exercise areas\n• Separate rooms for cats with play areas\n• Modern veterinary office with the latest equipment\n• Quarantine zone for new arrivals\n• Rooms for volunteers and visitors\n\nNow we have the opportunity to accept even more animals in need of help. Improved living conditions will allow our pets to feel more comfortable while they wait for their future owners.\n\nWe are immensely grateful to everyone who contributed to this project. Together we are making the world kinder for our four-legged friends!",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Пять питомцев нашли новые дома",
+      "titleEn": "Five Pets Found New Homes",
+      "date": "2024-12-18",
+      "category": "Усыновления",
+      "categoryEn": "Adoptions",
+      "image": "news1.svg",
+      "excerpt": "На этой неделе пять наших подопечных обрели любящих хозяев. Спасибо всем, кто помог им найти семью!",
+      "excerptEn": "This week, five of our wards found loving owners. Thanks to everyone who helped them find a family!",
+      "content": "На этой неделе произошло настоящее чудо - пять наших подопечных обрели любящих хозяев! Каждое усыновление - это результат большой работы нашей команды и вашей поддержки.\n\nНовые семьи:\n• Бобик (лабрадор, 2 года) - переехал к семье с двумя детьми\n• Мурка (дворовая кошка, 1 год) - нашла дом у пожилой пары\n• Рекс (овчарка, 3 года) - стал компаньоном для активного молодого человека\n• Пушистик (персидская кошка, 2 года) - обрел дом у семьи с частным домом\n• Шарик (дворняжка, 4 года) - переехал к опытным владельцам собак\n\nМы тщательно проверяем каждого потенциального хозяина, чтобы убедиться, что животное попадет в хорошие руки. Все новые владельцы прошли собеседование и получили рекомендации по уходу.\n\nСпасибо всем, кто помог этим животным найти дом - волонтерам, донорам и всем, кто распространял информацию о наших питомцах!",
+      "contentEn": "This week a real miracle happened - five of our wards found loving owners! Each adoption is the result of great work by our team and your support.\n\nNew families:\n• Bobik (Labrador, 2 years old) - moved to a family with two children\n• Murka (street cat, 1 year old) - found a home with an elderly couple\n• Rex (German Shepherd, 3 years old) - became a companion for an active young man\n• Fluffy (Persian cat, 2 years old) - found a home with a family with a private house\n• Sharik (mixed breed, 4 years old) - moved to experienced dog owners\n\nWe carefully check each potential owner to make sure the animal ends up in good hands. All new owners have been interviewed and received care recommendations.\n\nThank you to everyone who helped these animals find a home - volunteers, donors and everyone who spread information about our pets!",
+      "featured": false
+    },
+    {
+      "id": 3,
+      "title": "Успешная операция для Барсика",
+      "titleEn": "Successful Surgery for Barsik",
+      "date": "2024-12-15",
+      "category": "Лечение",
+      "categoryEn": "Treatment",
+      "image": "news2.svg",
+      "excerpt": "Нашему любимому Барсику провели сложную операцию, и он идет на поправку. Спасибо ветеринарам и всем, кто поддержал его!",
+      "excerptEn": "Our beloved Barsik underwent a complex operation and is recovering. Thanks to the veterinarians and everyone who supported him!",
+      "content": "Нашему любимому Барсику, который провел в приюте уже больше года, была необходима сложная операция на позвоночнике. Благодаря вашим пожертвованиям, мы смогли собрать необходимую сумму и провести операцию в лучшей ветеринарной клинике города.\n\nОперация прошла успешно! Барсик провел неделю в стационаре под наблюдением опытных ветеринаров. Сейчас он находится на реабилитации в нашем приюте и уже делает первые шаги.\n\nБарсик - это особенный кот. Несмотря на свои проблемы со здоровьем, он всегда был очень дружелюбным и ласковым. Мы верим, что после полного восстановления он обязательно найдет свой дом.\n\nСпасибо всем, кто поддержал Барсика финансово и морально. Ваша помощь спасла жизнь этому замечательному коту!",
+      "contentEn": "Our beloved Barsik, who has been at the shelter for more than a year, needed a complex spinal surgery. Thanks to your donations, we were able to raise the necessary amount and perform the operation at the best veterinary clinic in the city.\n\nThe operation was successful! Barsik spent a week in the hospital under the supervision of experienced veterinarians. He is now undergoing rehabilitation at our shelter and is already taking his first steps.\n\nBarsik is a special cat. Despite his health problems, he has always been very friendly and affectionate. We believe that after full recovery, he will definitely find his home.\n\nThank you to everyone who supported Barsik financially and morally. Your help saved the life of this wonderful cat!",
+      "featured": false
+    },
+    {
+      "id": 4,
+      "title": "Новые волонтеры присоединились к нам",
+      "titleEn": "New Volunteers Joined Us",
+      "date": "2024-12-12",
+      "category": "Волонтеры",
+      "categoryEn": "Volunteers",
+      "image": "news3.svg",
+      "excerpt": "К нашей команде присоединились 10 новых волонтеров. Добро пожаловать в семью \"Дом Лап\"!",
+      "excerptEn": "10 new volunteers joined our team. Welcome to the \"Dom Lap\" family!",
+      "content": "Мы рады сообщить, что к нашей команде присоединились 10 новых волонтеров! Это замечательные люди, которые готовы посвящать свое время и силы помощи нашим питомцам.\n\nНовые волонтеры будут помогать нам в различных направлениях:\n• Уход за животными (кормление, прогулки, игры)\n• Ветеринарная помощь (ассистирование на приемах)\n• Работа с посетителями (консультации, экскурсии)\n• Организация мероприятий (ярмарки, дни открытых дверей)\n• Фотография и видеосъемка для соцсетей\n\nВсе новые волонтеры прошли обучение и инструктаж по работе с животными. Мы очень ценим их желание помочь и уверены, что вместе мы сможем сделать еще больше для наших подопечных.\n\nЕсли вы тоже хотите стать волонтером, заполните заявку на нашем сайте. Каждая пара рук важна для нас!",
+      "contentEn": "We are pleased to announce that 10 new volunteers have joined our team! These are wonderful people who are ready to devote their time and energy to helping our pets.\n\nNew volunteers will help us in various areas:\n• Animal care (feeding, walking, playing)\n• Veterinary assistance (assisting at appointments)\n• Working with visitors (consultations, tours)\n• Event organization (fairs, open days)\n• Photography and videography for social media\n\nAll new volunteers have been trained and briefed on working with animals. We greatly appreciate their desire to help and are confident that together we can do even more for our wards.\n\nIf you also want to become a volunteer, fill out an application on our website. Every pair of hands is important to us!",
+      "featured": false
+    },
+    {
+      "id": 5,
+      "title": "Спасены 8 животных из заброшенного дома",
+      "titleEn": "8 Animals Rescued from Abandoned House",
+      "date": "2024-12-10",
+      "category": "Спасение",
+      "categoryEn": "Rescue",
+      "image": "news4.svg",
+      "excerpt": "Наша команда спасла 8 животных, которые жили в ужасных условиях. Теперь они получают необходимую помощь и заботу.",
+      "excerptEn": "Our team rescued 8 animals that were living in terrible conditions. Now they are receiving the necessary help and care.",
+      "content": "Наша команда получила сигнал о животных, живущих в заброшенном доме в ужасных условиях. Немедленно была организована спасательная операция.\n\nМы обнаружили 8 животных:\n• 5 собак разных пород и возрастов\n• 3 кошки, одна из которых была беременна\n\nВсе животные находились в критическом состоянии - истощенные, с признаками недоедания и болезней. Некоторые из них боялись людей из-за жестокого обращения.\n\nСейчас все спасенные животные находятся в нашем приюте, где они получают:\n• Необходимое медицинское лечение\n• Правильное питание\n• Заботу и внимание наших волонтеров\n• Реабилитацию для восстановления доверия к людям\n\nОдна из кошек уже родила здоровых котят, которые также находятся под нашим присмотром. Мы надеемся, что все эти животные смогут полностью восстановиться и найти любящие семьи.\n\nСпасибо всем, кто поддерживает нашу работу. Без вашей помощи мы не смогли бы спасать животных в таких ситуациях!",
+      "contentEn": "Our team received a signal about animals living in an abandoned house in terrible conditions. A rescue operation was immediately organized.\n\nWe found 8 animals:\n• 5 dogs of different breeds and ages\n• 3 cats, one of which was pregnant\n\nAll animals were in critical condition - emaciated, with signs of malnutrition and disease. Some of them were afraid of people due to abuse.\n\nAll rescued animals are now at our shelter, where they receive:\n• Necessary medical treatment\n• Proper nutrition\n• Care and attention from our volunteers\n• Rehabilitation to restore trust in people\n\nOne of the cats has already given birth to healthy kittens, who are also under our care. We hope that all these animals will be able to fully recover and find loving families.\n\nThank you to everyone who supports our work. Without your help, we would not be able to rescue animals in such situations!",
+      "featured": false
+    },
+    {
+      "id": 6,
+      "title": "Благотворительная ярмарка прошла успешно",
+      "titleEn": "Charity Fair Was Successful",
+      "date": "2024-12-08",
+      "category": "Благотворительность",
+      "categoryEn": "Charity",
+      "image": "news5.svg",
+      "excerpt": "Мы собрали 50 000 рублей на лечение наших питомцев. Спасибо всем участникам и организаторам!",
+      "excerptEn": "We raised 50,000 rubles for the treatment of our pets. Thanks to all participants and organizers!",
+      "content": "В минувшие выходные мы провели благотворительную ярмарку, которая превзошла все наши ожидания! Мероприятие собрало более 200 посетителей и помогло нам собрать 50 000 рублей на лечение наших питомцев.\n\nНа ярмарке было представлено:\n• Ручная работа от наших волонтеров (игрушки, аксессуары для животных)\n• Выпечка и домашние сладости\n• Сувенирная продукция с символикой приюта\n• Мастер-классы по изготовлению игрушек для животных\n• Фотосессии с нашими питомцами\n• Лотерея с призами\n\nОсобенно трогательным моментом стало выступление наших подопечных - несколько собак показали свои навыки, а кошки демонстрировали свою дружелюбность.\n\nСобранные средства пойдут на:\n• Оплату ветеринарных услуг\n• Покупку лекарств и корма\n• Улучшение условий содержания животных\n\nМы благодарим всех участников, организаторов и спонсоров ярмарки. Ваша поддержка помогает нам продолжать спасать жизни животных!",
+      "contentEn": "Last weekend we held a charity fair that exceeded all our expectations! The event gathered more than 200 visitors and helped us raise 50,000 rubles for the treatment of our pets.\n\nThe fair featured:\n• Handmade items from our volunteers (toys, pet accessories)\n• Baked goods and homemade sweets\n• Souvenir products with shelter symbols\n• Master classes on making toys for animals\n• Photo sessions with our pets\n• Raffle with prizes\n\nA particularly touching moment was the performance of our wards - several dogs showed their skills, and cats demonstrated their friendliness.\n\nThe funds raised will go to:\n• Payment for veterinary services\n• Purchase of medicines and food\n• Improving animal living conditions\n\nWe thank all participants, organizers and sponsors of the fair. Your support helps us continue to save animal lives!",
+      "featured": false
+    }
+  ]
+}
+

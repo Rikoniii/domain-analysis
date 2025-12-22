@@ -1,0 +1,57 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "title": "Рождественская ярмарка",
+      "titleEn": "Christmas Fair",
+      "description": "Приходите на нашу ярмарку и поддержите приют! Будет много интересных товаров, еды и развлечений для всей семьи. Все вырученные средства пойдут на лечение и содержание наших питомцев.",
+      "descriptionEn": "Come to our fair and support the shelter! There will be many interesting goods, food and entertainment for the whole family. All proceeds will go to the treatment and maintenance of our pets.",
+      "date": "2024-12-25",
+      "day": 25,
+      "month": "Дек",
+      "monthEn": "Dec",
+      "location": "Парк Сокольники",
+      "locationEn": "Sokolniki Park",
+      "time": "12:00 - 18:00",
+      "image": "news-featured.svg",
+      "featured": false
+    },
+    {
+      "id": 2,
+      "title": "Новогодний день открытых дверей",
+      "titleEn": "New Year Open House",
+      "description": "Приходите познакомиться с нашими питомцами! В этот день вы сможете пообщаться с животными, узнать об их истории и, возможно, найти себе нового друга. Экскурсии проводятся каждый час.",
+      "descriptionEn": "Come meet our pets! On this day you can interact with the animals, learn about their history and perhaps find yourself a new friend. Tours are conducted every hour.",
+      "date": "2024-12-30",
+      "day": 30,
+      "month": "Дек",
+      "monthEn": "Dec",
+      "location": "Приют \"Дом Лап\"",
+      "locationEn": "Dom Lap Shelter",
+      "time": "10:00 - 16:00",
+      "image": "news1.svg",
+      "featured": false
+    },
+    {
+      "id": 3,
+      "title": "Мастер-класс по уходу за животными",
+      "titleEn": "Pet Care Workshop",
+      "description": "Приглашаем всех желающих на мастер-класс по правильному уходу за домашними животными. Наши ветеринары расскажут о питании, здоровье и воспитании питомцев.",
+      "descriptionEn": "We invite everyone to a workshop on proper pet care. Our veterinarians will talk about nutrition, health and pet training.",
+      "date": "2025-01-15",
+      "day": 15,
+      "month": "Янв",
+      "monthEn": "Jan",
+      "location": "Приют \"Дом Лап\"",
+      "locationEn": "Dom Lap Shelter",
+      "time": "14:00 - 16:00",
+      "image": "news2.svg",
+      "featured": false
+    }
+  ]
+}
+
+
+
+
+

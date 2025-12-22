@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Животное - Дом Лап</title>
+    <link rel="stylesheet" href="css/style.css?v=2.1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 
+        Блок "Шапка сайта" (Header):
+        Основная навигация сайта, содержит логотип приюта, главное меню с ссылками на разделы сайта,
+        кнопку пожертвования и кнопку мобильного меню для адаптивной версии.
+    -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <!-- Логотип приюта: изображение и текст -->
+                <div class="logo">
+                    <a href="index.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit;">
+                        <img src="images/logo.svg" alt="Дом Лап" class="logo-img">
+                        <span class="logo-text">Дом Лап</span>
+                    </a>
+                </div>
+                <!-- Главное меню навигации: ссылки на основные разделы сайта -->
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link" data-translate="nav.home">Главная</a></li>
+                    <li><a href="animals.html" class="nav-link active" data-translate="nav.animals">Наши животные</a></li>
+                    <li><a href="news.html" class="nav-link" data-translate="nav.news">Новости</a></li>
+                    <li><a href="help.html" class="nav-link" data-translate="nav.help">Как помочь</a></li>
+                    <li><a href="about.html" class="nav-link" data-translate="nav.about">О приюте</a></li>
+                </ul>
+                <!-- Дополнительные действия: переключатели, кнопка пожертвования, личный кабинет и мобильное меню -->
+                <div class="nav-actions">
+                    <button class="lang-switcher" id="langSwitcher" title="Переключить язык" data-translate-title="common.language">RU</button>
+                    <button class="theme-switcher" id="themeSwitcher" title="Переключить тему"><span>☀️</span></button>
+                    <a href="donate.html" class="btn btn-primary" data-translate="nav.donate">Сделать пожертвование</a>
+                    <a href="profile.html" class="nav-link" data-translate="nav.profile">Личный кабинет</a>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 
+        Блок "Страница животного" (Animal Detail):
+        Детальная информация о животном с фотогалереей, описанием, характеристиками
+        и возможностью подать заявку на усыновление.
+    -->
+    <section class="animal-detail">
+        <div class="animal-detail-container">
+            <nav class="breadcrumb" id="animalBreadcrumb">
+                <!-- Хлебные крошки будут заполнены через JavaScript -->
+            </nav>
+            <div class="animal-detail-content" id="animalDetailContent">
+                <!-- Контент будет загружен через JavaScript -->
+                <div style="text-align: center; padding: 4rem 0;">
+                    <p>Загрузка информации о животном...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Полноэкранная галерея животного -->
+    <div class="modal full-gallery-modal" id="fullScreenGalleryModal">
+        <div class="modal-content full-gallery-content">
+            <div class="full-gallery-header">
+                <h2 id="fullScreenAnimalName"></h2>
+                <button class="modal-close" onclick="closeFullScreenGallery()" data-translate-title="common.close">&times;</button>
+            </div>
+            <div class="full-gallery-body">
+                <button class="full-gallery-nav prev" onclick="previousFullScreenPhoto()">‹</button>
+                <img src="" alt="" id="fullScreenPhoto" class="full-gallery-image">
+                <button class="full-gallery-nav next" onclick="nextFullScreenPhoto()">›</button>
+            </div>
+            <div class="full-gallery-counter" id="fullScreenCounter"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.svg" alt="Дом Лап" class="logo-img">
+                        <span class="logo-text">Дом Лап</span>
+                    </div>
+                    <p class="footer-description" data-translate="footer.description">
+                        Приют для животных, где каждое существо получает шанс на счастливую жизнь.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title" data-translate="footer.navigation">Навигация</h3>
+                    <ul class="footer-links">
+                        <li><a href="animals.html" data-translate="nav.animals">Наши животные</a></li>
+                        <li><a href="news.html" data-translate="nav.news">Новости</a></li>
+                        <li><a href="help.html" data-translate="nav.help">Как помочь</a></li>
+                        <li><a href="about.html" data-translate="nav.about">О приюте</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title" data-translate="footer.contacts">Контакты</h3>
+                    <div class="contact-info">
+                        <p>📞 +7 (495) 123-45-67</p>
+                        <p>📧 info@domlap.ru</p>
+                        <p>📍 Москва, ул. Добрая, д. 1</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title" data-translate="footer.social">Социальные сети</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">VK</a>
+                        <a href="#" class="social-link">Telegram</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-translate="footer.copyright">© 2024 Дом Лап. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/animals-db.js"></script>
+    <script src="js/animal-detail.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

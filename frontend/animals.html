@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Наши животные - Дом Лап</title>
+    <link rel="stylesheet" href="css/style.css?v=2.1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/svg+xml" href="images/icon-192.svg">
+    <link rel="shortcut icon" href="images/icon-192.svg">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="index.html" class="logo" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
+                    <img src="images/logo.svg" alt="Дом Лап" class="logo-img">
+                    <span class="logo-text">Дом Лап</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link" data-translate="nav.home">Главная</a></li>
+                    <li><a href="animals.html" class="nav-link active" data-translate="nav.animals">Наши животные</a></li>
+                    <li><a href="news.html" class="nav-link" data-translate="nav.news">Новости</a></li>
+                    <li><a href="help.html" class="nav-link" data-translate="nav.help">Как помочь</a></li>
+                    <li><a href="about.html" class="nav-link" data-translate="nav.about">О приюте</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="lang-switcher" id="langSwitcher" title="Переключить язык" data-translate-title="common.language">RU</button>
+                    <button class="theme-switcher" id="themeSwitcher" title="Переключить тему"><span>☀️</span></button>
+                    <a href="donate.html" class="btn btn-primary" data-translate="nav.donate">Сделать пожертвование</a>
+                    <a href="profile.html" class="nav-link" data-translate="nav.profile">Личный кабинет</a>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title" data-translate="animals.title">Наши животные</h1>
+            <p class="page-subtitle" data-translate="animals.subtitle">Каждое животное ждет своего человека. Познакомьтесь с нашими питомцами!</p>
+            
+            <!-- Animals Statistics -->
+            <div class="animals-stats">
+                <div class="animals-stat-card">
+                    <div class="animals-stat-icon">🐾</div>
+                    <div class="animals-stat-content">
+                        <div class="animals-stat-number" id="totalAnimalsCount">0</div>
+                        <div class="animals-stat-label" data-translate="animals.stats.total">Всего в приюте</div>
+                    </div>
+                </div>
+                <div class="animals-stat-card">
+                    <div class="animals-stat-icon">❤️</div>
+                    <div class="animals-stat-content">
+                        <div class="animals-stat-number" id="adoptedAnimalsCount">0</div>
+                        <div class="animals-stat-label" data-translate="animals.stats.adopted">Усыновлено</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="species" data-translate="animals.filterSpecies">Вид:</label>
+                    <select id="species" class="filter-select">
+                        <option value="" data-translate="animals.all">Все</option>
+                        <option value="dog" data-translate="animals.dogs">Собаки</option>
+                        <option value="cat" data-translate="animals.cats">Кошки</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="age" data-translate="animals.filterAge">Возраст:</label>
+                    <select id="age" class="filter-select">
+                        <option value="" data-translate="animals.all">Все</option>
+                        <option value="young">До 1 года</option>
+                        <option value="adult">1-3 года</option>
+                        <option value="senior">Старше 3 лет</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="gender" data-translate="animals.filterGender">Пол:</label>
+                    <select id="gender" class="filter-select">
+                        <option value="" data-translate="animals.all">Все</option>
+                        <option value="male" data-translate="animals.male">Мальчик</option>
+                        <option value="female" data-translate="animals.female">Девочка</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="breed" data-translate="animals.filterBreed">Порода:</label>
+                    <select id="breed" class="filter-select">
+                        <option value="" data-translate="animals.all">Все</option>
+                        <!-- Породы будут загружены динамически -->
+                    </select>
+                </div>
+                <button class="btn btn-secondary" id="clearFilters" data-translate="common.clear">Очистить</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Available Animals Section -->
+    <section class="animals-section available-section">
+        <div class="container">
+            <h2 class="section-title" data-translate="animals.available">В приюте</h2>
+            <div class="animals-grid" id="availableAnimalsGrid">
+                <!-- Карточки доступных животных будут загружены динамически -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Adopted Animals Section -->
+    <section class="animals-section adopted-section">
+        <div class="container">
+            <h2 class="section-title" data-translate="animals.adopted">Усыновлены</h2>
+            <div class="animals-grid" id="adoptedAnimalsGrid">
+                <!-- Карточки усыновленных животных будут загружены динамически -->
+            </div>
+        </div>
+    </section>
+
+    <!-- No Results Message -->
+    <div class="no-results" id="noResults" style="display: none;">
+        <div class="container">
+            <div class="no-results-content">
+                <h3 data-translate="animals.noResults">Животные не найдены</h3>
+                <p data-translate="animals.noResultsText">Попробуйте изменить параметры поиска</p>
+                <button class="btn btn-primary" onclick="clearFilters()" data-translate="animals.showAll">Показать всех</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Animal Detail Modal with Slider -->
+    <div class="modal animal-detail-modal" id="animalDetailModal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h2 id="modalAnimalName"></h2>
+                <button class="modal-close" onclick="closeAnimalDetailModal()" data-translate-title="common.close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="animal-detail-modal-content">
+                    <!-- Photo Slider -->
+                    <div class="animal-gallery-modal">
+                        <div class="slider-container-modal">
+                            <img src="" alt="Animal Photo" class="slider-image-modal active" id="modalMainImage">
+                            <button class="slider-btn prev-btn-modal" onclick="changeModalImage(-1)">‹</button>
+                            <button class="slider-btn next-btn-modal" onclick="changeModalImage(1)">›</button>
+                        </div>
+                        <div class="slider-dots-modal" id="modalSliderDots">
+                            <!-- Dots will be generated dynamically -->
+                        </div>
+                    </div>
+                    
+                    <!-- Animal Info -->
+                    <div class="animal-info-modal">
+                        <div class="animal-status-modal" id="modalAnimalStatus"></div>
+                        <p class="animal-details-modal" id="modalAnimalDetails"></p>
+                        <p class="animal-description-modal" id="modalAnimalDescription"></p>
+                        
+                        <div class="animal-traits-modal" id="modalAnimalTraits"></div>
+                        
+                        <div class="animal-health-modal" id="modalAnimalHealth"></div>
+                        
+                        <div class="modal-actions">
+                            <button class="btn btn-primary btn-large" id="modalAdoptButton" onclick="openAdoptionModalFromDetail()" style="display: none;">
+                                <span data-translate="animals.adopt">Хочу усыновить</span>
+                            </button>
+                            <a href="help.html" class="btn btn-secondary btn-large" data-translate="animals.help">Как помочь</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Adoption Modal -->
+    <div class="modal" id="adoptionModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 data-translate="adoption.title">Заявка на усыновление</h2>
+                <button class="modal-close" onclick="closeAdoptionModal()" data-translate-title="common.close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="adoptionForm">
+                    <div class="form-group">
+                        <label for="animalName" data-translate="adoption.animal">Животное:</label>
+                        <input type="text" id="animalName" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="fullName" data-translate="adoption.fullName">ФИО *</label>
+                        <input type="text" id="fullName" name="fullName" autocomplete="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" data-translate="adoption.phone">Телефон *</label>
+                        <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-translate="adoption.email">Email</label>
+                        <input type="email" id="email" name="email" autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="address" data-translate="adoption.address">Адрес</label>
+                        <input type="text" id="address" name="address" autocomplete="street-address">
+                    </div>
+                    <div class="form-group">
+                        <label for="experience" data-translate="adoption.experience">Опыт содержания животных</label>
+                        <textarea id="experience" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="motivation" data-translate="adoption.motivation">Почему хотите усыновить именно этого питомца?</label>
+                        <textarea id="motivation" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="agreement" required>
+                            <span data-translate="adoption.agreement">Я согласен с условиями усыновления и обязуюсь заботиться о животном</span>
+                        </label>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="closeAdoptionModal()" data-translate="common.cancel">Отмена</button>
+                        <button type="submit" class="btn btn-primary" data-translate="adoption.submit">Подать заявку</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно успешной подачи заявки на усыновление -->
+    <div class="modal" id="adoptionSuccessModal" style="display: none;">
+        <div class="modal-content adoption-success-modal">
+            <div class="adoption-success-icon">✓</div>
+            <h2 style="color: var(--primary-color); margin-top: 1rem;">Заявка отправлена!</h2>
+            <p id="adoptionSuccessMainText" style="font-size: 1.05rem; color: var(--text-color); margin: 1rem 0;">
+                Ваша заявка на усыновление успешно отправлена. Мы свяжемся с вами в ближайшее время.
+            </p>
+            <div class="adoption-success-info">
+                <p id="adoptionSuccessAnimal" class="adoption-success-line"></p>
+                <p id="adoptionSuccessName" class="adoption-success-line"></p>
+                <p id="adoptionSuccessPhone" class="adoption-success-line"></p>
+                <p id="adoptionSuccessEmail" class="adoption-success-line"></p>
+            </div>
+            <div class="adoption-success-actions">
+                <button class="btn btn-primary" id="adoptionGoToAnimalsButton" style="width: 100%;">Вернуться к животным</button>
+                <button class="btn btn-outline" id="adoptionGoToProfileButton" style="width: 100%;">Перейти в профиль</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.svg" alt="Дом Лап" class="logo-img">
+                        <span class="logo-text">Дом Лап</span>
+                    </div>
+                    <p class="footer-description" data-translate="footer.description">
+                        Приют для животных, где каждое существо получает шанс на счастливую жизнь.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title" data-translate="footer.navigation">Навигация</h3>
+                    <ul class="footer-links">
+                        <li><a href="animals.html" data-translate="nav.animals">Наши животные</a></li>
+                        <li><a href="news.html" data-translate="nav.news">Новости</a></li>
+                        <li><a href="help.html" data-translate="nav.help">Как помочь</a></li>
+                        <li><a href="about.html" data-translate="nav.about">О приюте</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title" data-translate="footer.contacts">Контакты</h3>
+                    <div class="contact-info">
+                        <p>📞 +7 (495) 123-45-67</p>
+                        <p>📧 info@domlap.ru</p>
+                        <p>📍 Москва, ул. Добрая, д. 1</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title" data-translate="footer.social">Социальные сети</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">VK</a>
+                        <a href="#" class="social-link">Telegram</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-translate="footer.copyright">© 2024 Дом Лап. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/animals-db.js"></script>
+    <!-- База заявок нужна здесь, чтобы заявки на усыновление сохранялись и отображались в админке -->
+    <script src="js/applications-db.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animals.js"></script>
+</body>
+</html>

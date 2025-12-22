@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Личный кабинет - Дом Лап</title>
+    <link rel="stylesheet" href="css/style.css?v=2.1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/svg+xml" href="images/icon-192.svg">
+    <link rel="shortcut icon" href="images/icon-192.svg">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="index.html" class="logo" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
+                    <img src="images/logo.svg" alt="Дом Лап" class="logo-img">
+                    <span class="logo-text">Дом Лап</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link" data-translate="nav.home">Главная</a></li>
+                    <li><a href="animals.html" class="nav-link" data-translate="nav.animals">Наши животные</a></li>
+                    <li><a href="news.html" class="nav-link" data-translate="nav.news">Новости</a></li>
+                    <li><a href="help.html" class="nav-link" data-translate="nav.help">Как помочь</a></li>
+                    <li><a href="about.html" class="nav-link" data-translate="nav.about">О приюте</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="lang-switcher" id="langSwitcher" title="Переключить язык" data-translate-title="common.language">RU</button>
+                    <button class="theme-switcher" id="themeSwitcher" title="Переключить тему"><span>☀️</span></button>
+                    <a href="donate.html" class="btn btn-primary" data-translate="nav.donate">Сделать пожертвование</a>
+                    <a href="profile.html" class="nav-link" data-translate="nav.profile">Личный кабинет</a>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title" data-translate="profile.title">Личный кабинет</h1>
+            <p class="page-subtitle" data-translate="profile.subtitle">Ваша история помощи животным</p>
+        </div>
+    </section>
+
+    <!-- 
+        Блок "Содержимое профиля" (Profile Content):
+        Личный кабинет пользователя с информацией о профиле, истории пожертвований,
+        заявках на усыновление и волонтерство, а также регулярных пожертвованиях.
+    -->
+    <section class="profile-section" style="display: none;">
+        <div class="container">
+            <div class="profile-content">
+                <!-- Информация о профиле: аватар, имя, контакты и статистика -->
+                <div class="profile-info">
+                    <div class="profile-card">
+                        <div class="profile-avatar" style="position: relative;">
+                            <div class="avatar-placeholder" id="profileAvatar" style="width: 80px; height: 80px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 2rem; color: white; overflow: hidden;">
+                                <img id="avatarImage" src="" alt="Avatar" style="width: 100%; height: 100%; object-fit: cover; display: none;">
+                                <span id="avatarPlaceholder">👤</span>
+                            </div>
+                            <button onclick="openEditProfileModal()" style="position: absolute; bottom: 0; right: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--primary-color); border: 2px solid white; color: white; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 0.9rem;" title="Изменить аватар">📷</button>
+                        </div>
+                        <div class="profile-details">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                <h2 id="profileName">Анна Петрова Васильевна</h2>
+                                <button class="btn btn-outline btn-small" onclick="openEditProfileModal()" data-translate-title="profile.editProfileTitle">✏️ Редактировать</button>
+                            </div>
+                            <p class="profile-phone" id="profilePhone">+7 (495) 123-45-67</p>
+                            <p class="profile-email" id="profileEmail">anna@example.com</p>
+                            <!-- Статистика пользователя: количество пожертвований и общая сумма -->
+                            <div class="profile-stats">
+                                <div class="stat stat-clickable" onclick="scrollToDonationHistory()" style="cursor: pointer;" title="Посмотреть историю пожертвований">
+                                    <div class="stat-number" id="statDonationsCount">5</div>
+                                <div class="stat-label" data-translate="profile.historyDonationsLabel">Пожертвований</div>
+                                </div>
+                                <div class="stat stat-clickable" onclick="scrollToDonationHistory()" style="cursor: pointer;" title="Посмотреть историю пожертвований">
+                                    <div class="stat-number" id="statTotalAmount">2 500 ₽</div>
+                                <div class="stat-label" data-translate="profile.historyTotalLabel">Всего пожертвовано</div>
+                                </div>
+                            </div>
+                            <!-- Индикатор регулярной подписки -->
+                            <div id="subscriptionIndicator" style="display: none; margin-top: 1rem; padding: 0.75rem; background: linear-gradient(135deg, rgba(76, 175, 80, 0.1) 0%, rgba(102, 187, 106, 0.1) 100%); border-radius: 8px; border-left: 4px solid var(--primary-color);">
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <span style="font-size: 1.2rem;">✓</span>
+                            <span style="font-weight: 600; color: var(--primary-color);" data-translate="profile.regular">Активная подписка на регулярные пожертвования</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- История пожертвований: список всех сделанных пожертвований -->
+                <div class="donation-history">
+                    <h3 data-translate="profile.donations">История пожертвований</h3>
+                    <div class="donation-list">
+                        <!-- Элемент истории пожертвования: дата, сумма, назначение, статус -->
+                        <div class="donation-item">
+                            <div class="donation-date">15 декабря 2024</div>
+                            <div class="donation-amount">500 ₽</div>
+                            <div class="donation-purpose">Корм для животных</div>
+                            <div class="donation-status completed">Завершено</div>
+                        </div>
+                        <div class="donation-item">
+                            <div class="donation-date">10 декабря 2024</div>
+                            <div class="donation-amount">1 000 ₽</div>
+                            <div class="donation-purpose">Ветеринарное лечение</div>
+                            <div class="donation-status completed">Завершено</div>
+                        </div>
+                        <div class="donation-item">
+                            <div class="donation-date">5 декабря 2024</div>
+                            <div class="donation-amount">500 ₽</div>
+                            <div class="donation-purpose">Содержание приюта</div>
+                            <div class="donation-status completed">Завершено</div>
+                        </div>
+                        <div class="donation-item">
+                            <div class="donation-date">1 декабря 2024</div>
+                            <div class="donation-amount">300 ₽</div>
+                            <div class="donation-purpose">Корм для животных</div>
+                            <div class="donation-status completed">Завершено</div>
+                        </div>
+                        <div class="donation-item">
+                            <div class="donation-date">25 ноября 2024</div>
+                            <div class="donation-amount">200 ₽</div>
+                            <div class="donation-purpose">Общие нужды</div>
+                            <div class="donation-status completed">Завершено</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Заявки пользователя: на усыновление и волонтерство -->
+                <div class="applications">
+                    <h3 data-translate="profile.applications">Мои заявки</h3>
+                    <div class="application-list">
+                        <!-- Элемент заявки: тип, животное, дата, статус рассмотрения -->
+                        <div class="application-item">
+                            <div class="application-type">Усыновление</div>
+                            <div class="application-animal">Бобик</div>
+                            <div class="application-date">18 декабря 2024</div>
+                            <div class="application-status pending">На рассмотрении</div>
+                        </div>
+                        <div class="application-item">
+                            <div class="application-type">Волонтерство</div>
+                            <div class="application-animal">-</div>
+                            <div class="application-date">15 декабря 2024</div>
+                            <div class="application-status approved">Одобрено</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Регулярные пожертвования: активные подписки на автоматические платежи -->
+                <div class="regular-donations">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <h3 data-translate="profile.regularTitle">Регулярные пожертвования</h3>
+                        <button class="btn btn-primary btn-small" id="subscribeButton" onclick="openRegularDonationModal()" style="display: none;">Подписаться</button>
+                    </div>
+                    <div style="margin-bottom: 1.5rem; padding: 1rem; background: var(--secondary-color); border-radius: 8px;">
+                        <p style="color: var(--text-light); line-height: 1.6; margin: 0;">
+                            <strong data-translate="profile.regularWhatTitle">Что такое регулярные пожертвования?</strong><br>
+                            <span data-translate="profile.regularWhatText">
+                            Регулярные пожертвования — это автоматические ежемесячные, еженедельные или ежеквартальные переводы с вашей карты. 
+                            Вы можете выбрать сумму и частоту списания. В любой момент вы можете изменить сумму, частоту или отменить подписку.
+                            </span>
+                        </p>
+                        </div>
+                    <div class="regular-list" id="regularDonationsList">
+                        <!-- Элементы регулярного пожертвования будут загружены динамически -->
+                    </div>
+                </div>
+
+                <!-- Управление картами для оплаты -->
+                <div class="payment-cards-section" style="margin-top: 2rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <h3 data-translate="profile.cardsTitle">Мои карты</h3>
+                        <button class="btn btn-primary btn-small" onclick="openAddCardModal()" data-translate="profile.cardsAddButton">Добавить карту</button>
+                    </div>
+                    <div style="margin-bottom: 1.5rem; padding: 1rem; background: var(--secondary-color); border-radius: 8px;">
+                        <p style="color: var(--text-light); line-height: 1.6; margin: 0;">
+                            <strong data-translate="profile.cardsSavedTitle">Сохраненные карты</strong><br>
+                            <span data-translate="profile.cardsSavedText">Добавьте карту для быстрой оплаты регулярных пожертвований. Данные карт хранятся в безопасном зашифрованном виде.</span>
+                        </p>
+                    </div>
+                    <div id="paymentCardsList" class="cards-list">
+                        <!-- Карты будут загружены динамически -->
+                    </div>
+                </div>
+
+                <!-- Волонтерство: статус и управление -->
+                <div class="volunteering-section">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <h3 data-translate="profile.volunteeringTitle">Волонтерство</h3>
+                    </div>
+                    <!-- Индикатор статуса волонтерства -->
+                    <div id="volunteerStatusIndicator" style="display: none; margin-bottom: 1rem; padding: 0.75rem; background: linear-gradient(135deg, rgba(76, 175, 80, 0.1) 0%, rgba(102, 187, 106, 0.1) 100%); border-radius: 8px; border-left: 4px solid var(--primary-color);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="font-size: 1.2rem;">✓</span>
+                            <span style="font-weight: 600; color: var(--primary-color);" data-translate="profile.volunteerActiveStatus">Вы являетесь активным волонтером</span>
+                        </div>
+                    </div>
+                    <div id="volunteerInfo" style="display: none; margin-bottom: 1.5rem; padding: 1.5rem; background: var(--white); border-radius: 8px; box-shadow: var(--shadow);">
+                        <div id="volunteerDetails">
+                            <!-- Информация о волонтерстве будет загружена динамически -->
+                        </div>
+                        <button class="btn btn-outline" id="leaveVolunteerButton" onclick="leaveVolunteering()" style="margin-top: 1rem;" data-translate="profile.volunteerLeaveButton">Покинуть волонтерство</button>
+                    </div>
+                    <div id="notVolunteerInfo" style="display: none; margin-bottom: 1.5rem; padding: 1.5rem; background: var(--secondary-color); border-radius: 8px;">
+                        <p style="color: var(--text-light); line-height: 1.6; margin: 0 0 1rem 0;" data-translate="profile.volunteerNotText">
+                            Вы еще не являетесь волонтером. Станьте частью нашей команды и помогите животным обрести дом!
+                        </p>
+                        <button class="btn btn-primary" onclick="openVolunteerApplicationModal()" data-translate="profile.volunteerApplyButton">Подать заявку на волонтерство</button>
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="profile-actions">
+                    <a href="donate.html" class="btn btn-primary" data-translate="profile.actionsDonate">Сделать пожертвование</a>
+                    <a href="animals.html" class="btn btn-secondary" data-translate="profile.actionsViewAnimals">Посмотреть животных</a>
+                    <button class="btn btn-outline" onclick="logout()" data-translate="profile.actionsLogout">Выйти</button>
+                    <button class="btn btn-secondary" style="margin-left: 0.5rem; background-color: #f44336; border-color: #f44336;" onclick="openDeleteProfileModal()" data-translate="profile.actionsDeleteProfile">
+                        Удалить профиль
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+        Модальное окно "Выбор действия" (Auth Choice Modal):
+        Позволяет пользователю выбрать между входом в существующий аккаунт или регистрацией нового.
+    -->
+    <div class="modal" id="authChoiceModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 data-translate="profile.authChoiceTitle">Личный кабинет</h2>
+                <button class="modal-close" onclick="closeAuthChoiceModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <button type="button" class="btn btn-primary btn-large" onclick="showLoginModal()" data-translate="profile.authChoiceLogin">Войти в аккаунт</button>
+                    <button type="button" class="btn btn-secondary btn-large" onclick="showRegisterModal()" data-translate="profile.authChoiceRegister">Зарегистрироваться</button>
+                </div>
+                <div id="previousAccountSuggestion" style="display: none; margin-top: 1.5rem; padding: 0.75rem; background: #e3f2fd; border-radius: 8px; border: 1px solid #2196F3;">
+                    <p style="margin: 0 0 0.5rem 0; font-weight: 600; color: #1976d2;">Войти в последний аккаунт?</p>
+                    <p id="previousAccountInfo" style="margin: 0 0 0.5rem 0; color: #666;"></p>
+                    <button type="button" class="btn btn-outline btn-small" id="usePreviousAccount" style="margin-right: 0.5rem;">Войти</button>
+                    <button type="button" class="btn btn-outline btn-small" id="dismissSuggestion">Нет, войти в другой</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно подтверждения удаления профиля -->
+    <div class="modal" id="deleteProfileModal">
+        <div class="modal-content" style="max-width: 480px;">
+            <div class="modal-header">
+                <h2>Удалить профиль</h2>
+                <button class="modal-close" onclick="closeDeleteProfileModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p style="line-height: 1.6; margin-bottom: 1.5rem;">
+                    Вы уверены, что хотите полностью удалить профиль и все связанные с ним данные
+                    (история пожертвований, сохранённые карты и настройки)?
+                    <br><strong>Это действие необратимо.</strong>
+                </p>
+                <div class="form-actions" style="display: flex; justify-content: flex-end; gap: 0.75rem;">
+                    <button type="button" class="btn btn-outline" onclick="closeDeleteProfileModal()">Отмена</button>
+                    <button type="button" class="btn btn-secondary" style="background-color: #f44336; border-color: #f44336;" onclick="deleteProfile()">
+                        Удалить профиль
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+        Модальное окно "Вход в личный кабинет" (Login Modal):
+        Форма для входа в личный кабинет пользователя. Использует номер телефона
+        для авторизации через SMS-код или звонок. Позволяет пользователям получить
+        доступ к своей истории пожертвований и заявок.
+    -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 data-translate="profile.loginTitle">Вход в личный кабинет</h2>
+                <button class="modal-close" onclick="closeLoginModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginPhone" data-translate="profile.loginPhoneLabel">Номер телефона *</label>
+                        <input type="tel" id="loginPhone" name="phone" autocomplete="tel" placeholder="+7 (___) ___-__-__" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginMethod" data-translate="profile.loginMethodLabel">Способ входа</label>
+                        <select id="loginMethod">
+                            <option value="sms" data-translate="profile.loginMethodSms">SMS-код</option>
+                            <option value="call" data-translate="profile.loginMethodCall">Звонок</option>
+                        </select>
+                    </div>
+                    <div id="loginCodeGroup" style="display: none;">
+                        <div class="form-group">
+                            <label for="loginCode" data-translate="profile.loginCodeLabel">Код подтверждения *</label>
+                            <input type="text" id="loginCode" name="code" placeholder="0000" maxlength="6" pattern="[0-9]{4,6}">
+                            <small style="color: var(--text-light); font-size: 0.85rem;" id="loginCodeHint"></small>
+                        </div>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="rememberMe">
+                            <span data-translate="profile.loginRemember">Сохранить данные для следующего входа</span>
+                        </label>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="closeLoginModal()" data-translate="profile.loginCancel">Отмена</button>
+                        <button type="submit" class="btn btn-primary" id="loginSubmitBtn" data-translate="profile.loginSubmit">Войти</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+        Модальное окно "Регистрация" (Register Modal):
+        Форма для регистрации нового пользователя. Собирает все данные профиля
+        и подтверждает телефон через SMS-код или звонок.
+    -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content" style="max-width: 600px;">
+            <div class="modal-header">
+                <h2 data-translate="profile.registerTitle">Регистрация</h2>
+                <button class="modal-close" onclick="closeRegisterModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="registerFirstName" data-translate="profile.registerFirstName">Имя *</label>
+                        <input type="text" id="registerFirstName" name="firstName" autocomplete="given-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerLastName" data-translate="profile.registerLastName">Фамилия *</label>
+                        <input type="text" id="registerLastName" name="lastName" autocomplete="family-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerMiddleName" data-translate="profile.registerMiddleName">Отчество</label>
+                        <input type="text" id="registerMiddleName" name="middleName" autocomplete="additional-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="registerEmail" data-translate="profile.registerEmail">Email *</label>
+                        <input type="email" id="registerEmail" name="email" autocomplete="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPhone" data-translate="profile.registerPhone">Номер телефона *</label>
+                        <input type="tel" id="registerPhone" name="phone" autocomplete="tel" placeholder="+7 (___) ___-__-__" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerMethod" data-translate="profile.registerMethodLabel">Способ подтверждения телефона</label>
+                        <select id="registerMethod">
+                            <option value="sms" data-translate="profile.registerMethodSms">SMS-код</option>
+                            <option value="call" data-translate="profile.registerMethodCall">Звонок</option>
+                        </select>
+                    </div>
+                    <div id="registerCodeGroup" style="display: none;">
+                        <div class="form-group">
+                            <label for="registerCode" data-translate="profile.registerCodeLabel">Код подтверждения *</label>
+                            <input type="text" id="registerCode" name="code" placeholder="0000" maxlength="6" pattern="[0-9]{4,6}">
+                            <small style="color: var(--text-light); font-size: 0.85rem;" id="registerCodeHint"></small>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="closeRegisterModal()" data-translate="profile.registerCancel">Отмена</button>
+                        <button type="submit" class="btn btn-primary" id="registerSubmitBtn" data-translate="profile.registerSubmit">Зарегистрироваться</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.svg" alt="Дом Лап" class="logo-img">
+                        <span class="logo-text">Дом Лап</span>
+                    </div>
+                    <p class="footer-description" data-translate="footer.description">
+                        Приют для животных, где каждое существо получает шанс на счастливую жизнь.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title" data-translate="footer.navigation">Навигация</h3>
+                    <ul class="footer-links">
+                        <li><a href="animals.html" data-translate="nav.animals">Наши животные</a></li>
+                        <li><a href="news.html" data-translate="nav.news">Новости</a></li>
+                        <li><a href="help.html" data-translate="nav.help">Как помочь</a></li>
+                        <li><a href="about.html" data-translate="nav.about">О приюте</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title" data-translate="footer.contacts">Контакты</h3>
+                    <div class="contact-info">
+                        <p>📞 +7 (495) 123-45-67</p>
+                        <p>📧 info@domlap.ru</p>
+                        <p>📍 Москва, ул. Добрая, д. 1</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title" data-translate="footer.social">Социальные сети</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">VK</a>
+                        <a href="#" class="social-link">Telegram</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-translate="footer.copyright">© 2024 Дом Лап. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for regular donation subscription -->
+    <div class="modal" id="regularDonationModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 data-translate="profile.regularModalTitle">Подписка на регулярное пожертвование</h2>
+                <button class="modal-close" onclick="closeRegularDonationModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="regularDonationForm">
+                    <div class="form-group">
+                        <label for="regularAmount" data-translate="profile.regularAmountLabel">Сумма пожертвования (₽) *</label>
+                        <input type="number" id="regularAmount" min="100" step="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regularFrequency" data-translate="profile.regularFrequencyLabel">Частота списания *</label>
+                        <select id="regularFrequency" required>
+                            <option value="monthly" data-translate="profile.regularFrequencyMonthly">Каждый месяц</option>
+                            <option value="weekly" data-translate="profile.regularFrequencyWeekly">Каждую неделю</option>
+                            <option value="quarterly" data-translate="profile.regularFrequencyQuarterly">Каждый квартал</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="regularPurpose" data-translate="profile.regularPurposeLabel">Назначение</label>
+                        <input type="text" id="regularPurpose" placeholder="Например: Корм для животных">
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="closeRegularDonationModal()" data-translate="profile.regularCancel">Отмена</button>
+                        <button type="submit" class="btn btn-primary" data-translate="profile.regularSubscribe">Подписаться</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for volunteer application -->
+    <div class="modal" id="volunteerApplicationModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 data-translate="profile.volunteerModalTitle">Стать волонтером</h2>
+                <button class="modal-close" onclick="closeVolunteerApplicationModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="volunteerApplicationForm">
+                    <div class="form-group">
+                        <label for="volunteerName">ФИО *</label>
+                        <input type="text" id="volunteerName" name="volunteerName" autocomplete="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="volunteerPhone">Телефон *</label>
+                        <input type="tel" id="volunteerPhone" name="volunteerPhone" autocomplete="tel" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="volunteerEmail">Email</label>
+                        <input type="email" id="volunteerEmail" name="volunteerEmail" autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="volunteerAge">Возраст</label>
+                        <input type="number" id="volunteerAge" min="16">
+                    </div>
+                    <div class="form-group">
+                        <label for="volunteerExperience">Опыт работы с животными</label>
+                        <textarea id="volunteerExperience" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="volunteerAvailability">Когда можете помогать?</label>
+                        <textarea id="volunteerAvailability" rows="2"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="volunteerMotivation">Почему хотите стать волонтером? *</label>
+                        <textarea id="volunteerMotivation" rows="3" required></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="closeVolunteerApplicationModal()" data-translate="profile.volunteerModalCancel">Отмена</button>
+                        <button type="submit" class="btn btn-primary" data-translate="profile.volunteerModalSubmit">Подать заявку</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно успешной подачи заявки на волонтёрство -->
+    <div class="modal" id="volunteerSuccessModal" style="display: none;">
+        <div class="modal-content adoption-success-modal">
+            <div class="adoption-success-icon">✓</div>
+            <h2 style="color: var(--primary-color); margin-top: 1rem;">Заявка отправлена!</h2>
+            <p id="volunteerSuccessMainText" style="font-size: 1.05rem; color: var(--text-color); margin: 1rem 0;">
+                Ваша заявка на волонтёрство успешно отправлена. Мы свяжемся с вами в ближайшее время.
+            </p>
+            <div class="adoption-success-info">
+                <p id="volunteerSuccessName" class="adoption-success-line"></p>
+                <p id="volunteerSuccessPhone" class="adoption-success-line"></p>
+                <p id="volunteerSuccessEmail" class="adoption-success-line"></p>
+            </div>
+            <div class="adoption-success-actions">
+                <button class="btn btn-primary" id="volunteerGoToHomeButton" style="width: 100%;">Перейти на главную</button>
+                <button class="btn btn-outline" id="volunteerGoToProfileButton" style="width: 100%;">Перейти в профиль</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for adding payment card -->
+    <div class="modal" id="addCardModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 data-translate="profile.cardModalTitle">Добавить карту</h2>
+                <button class="modal-close" onclick="closeAddCardModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="addCardForm">
+                    <div class="form-group">
+                        <label for="cardNumber" data-translate="profile.cardNumberLabel">Номер карты *</label>
+                        <input type="text" id="cardNumber" name="cardNumber" autocomplete="cc-number" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="form-group">
+                            <label for="cardExpiry" data-translate="profile.cardExpiryLabel">Срок действия *</label>
+                            <input type="text" id="cardExpiry" name="cardExpiry" autocomplete="cc-exp" placeholder="MM/YY" maxlength="5" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cardCVC" data-translate="profile.cardCvcLabel">CVC *</label>
+                            <input type="text" id="cardCVC" name="cardCVC" autocomplete="cc-csc" placeholder="123" maxlength="3" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cardName" data-translate="profile.cardNameLabel">Имя на карте *</label>
+                        <input type="text" id="cardName" name="cardName" autocomplete="cc-name" placeholder="IVAN IVANOV" required>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="setAsActive" checked>
+                            <span data-translate="profile.cardSetActive">Сделать активной картой</span>
+                        </label>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="closeAddCardModal()" data-translate="profile.cardCancel">Отмена</button>
+                        <button type="submit" class="btn btn-primary" data-translate="profile.cardSave">Сохранить карту</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for editing profile -->
+    <div class="modal" id="editProfileModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 data-translate="profile.editProfileTitle">Редактировать профиль</h2>
+                <button class="modal-close" onclick="closeEditProfileModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="editProfileForm">
+                    <div class="form-group">
+                        <label for="editFirstName" data-translate="profile.editFirstName">Имя *</label>
+                        <input type="text" id="editFirstName" name="firstName" autocomplete="given-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editLastName" data-translate="profile.editLastName">Фамилия *</label>
+                        <input type="text" id="editLastName" name="lastName" autocomplete="family-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editEmail" data-translate="profile.editEmail">Email *</label>
+                        <input type="email" id="editEmail" name="email" autocomplete="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editPhone" data-translate="profile.editPhone">Телефон *</label>
+                        <input type="tel" id="editPhone" name="phone" autocomplete="tel" placeholder="+7 (___) ___-__-__" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editAvatar" data-translate="profile.editAvatar">Аватар</label>
+                        <input type="file" id="editAvatar" accept="image/*" onchange="previewAvatar(this)">
+                        <div id="avatarPreview" style="margin-top: 0.5rem; display: none;">
+                            <img id="avatarPreviewImg" src="" alt="Preview" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color);">
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="closeEditProfileModal()" data-translate="profile.editCancel">Отмена</button>
+                        <button type="submit" class="btn btn-primary" data-translate="profile.editSave">Сохранить изменения</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/translations.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/donations-db.js"></script>
+    <script src="js/applications-db.js"></script>
+    <script src="js/volunteers-db.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

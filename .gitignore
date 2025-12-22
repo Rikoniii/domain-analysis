@@ -31,7 +31,16 @@ __pycache__/
 venv/
 env/
 
+# База данных SQLite
+*.db
+*.sqlite
+*.sqlite3
+shelter.db
+
+# Переменные окружения
+.env
+.env.local
+
 # Служебные файлы
 *.bak
 *.backup
-

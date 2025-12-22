@@ -1,0 +1,57 @@
+{
+  "rooms": [
+    {
+      "id": 1,
+      "name": "Вольеры для собак",
+      "nameEn": "Dog Enclosures",
+      "description": "Просторные вольеры с выгулом для комфортного содержания собак. Каждый вольер оборудован утепленным домиком, поилками и кормушками. Регулярная уборка и дезинфекция обеспечивают здоровую среду для наших питомцев.",
+      "descriptionEn": "Spacious enclosures with exercise areas for comfortable dog housing. Each enclosure is equipped with an insulated house, drinkers and feeders. Regular cleaning and disinfection ensure a healthy environment for our pets.",
+      "images": ["facility1.svg"],
+      "capacity": "До 30 собак",
+      "capacityEn": "Up to 30 dogs",
+      "features": ["Утепленные домики", "Автоматические поилки", "Зона выгула", "Система вентиляции"],
+      "featuresEn": ["Insulated houses", "Automatic drinkers", "Exercise area", "Ventilation system"],
+      "events": []
+    },
+    {
+      "id": 2,
+      "name": "Кошачий дом",
+      "nameEn": "Cat House",
+      "description": "Уютные комнаты с игровыми комплексами для кошек. Пространство разделено на зоны для активных игр и отдыха. Специальные полки и домики позволяют кошкам чувствовать себя в безопасности.",
+      "descriptionEn": "Cozy rooms with play complexes for cats. The space is divided into zones for active play and rest. Special shelves and houses allow cats to feel safe.",
+      "images": ["facility2.svg"],
+      "capacity": "До 40 кошек",
+      "capacityEn": "Up to 40 cats",
+      "features": ["Игровые комплексы", "Уютные домики", "Когтеточки", "Зона отдыха"],
+      "featuresEn": ["Play complexes", "Cozy houses", "Scratching posts", "Rest area"],
+      "events": []
+    },
+    {
+      "id": 3,
+      "name": "Ветеринарная клиника",
+      "nameEn": "Veterinary Clinic",
+      "description": "Полноценная клиника с операционной и кабинетами для осмотра. Современное оборудование позволяет проводить диагностику и лечение на высоком уровне. Работают опытные ветеринары.",
+      "descriptionEn": "Full clinic with operating room and examination rooms. Modern equipment allows for high-level diagnosis and treatment. Experienced veterinarians work here.",
+      "images": ["facility3.svg"],
+      "capacity": "2 операционных, 4 кабинета",
+      "capacityEn": "2 operating rooms, 4 examination rooms",
+      "features": ["Операционная", "Рентген", "Лаборатория", "Стационар"],
+      "featuresEn": ["Operating room", "X-ray", "Laboratory", "Inpatient ward"],
+      "events": []
+    },
+    {
+      "id": 4,
+      "name": "Зона карантина",
+      "nameEn": "Quarantine Zone",
+      "description": "Изолированные помещения для новых поступлений. Здесь животные проходят обязательный карантин и медицинское обследование перед переводом в основные помещения приюта.",
+      "descriptionEn": "Isolated rooms for new arrivals. Here animals undergo mandatory quarantine and medical examination before being transferred to the main shelter premises.",
+      "images": ["facility4.svg"],
+      "capacity": "До 15 животных",
+      "capacityEn": "Up to 15 animals",
+      "features": ["Изоляция", "Медицинский контроль", "Наблюдение 24/7", "Дезинфекция"],
+      "featuresEn": ["Isolation", "Medical monitoring", "24/7 observation", "Disinfection"],
+      "events": []
+    }
+  ]
+}
+

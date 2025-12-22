@@ -1,0 +1,82 @@
+{
+  "donations": [
+    {
+      "id": 1,
+      "userId": "anna_petrova",
+      "userName": "Анна Петрова Васильевна",
+      "userPhone": "+7 (495) 123-45-67",
+      "userEmail": "anna@example.com",
+      "amount": 500,
+      "purpose": "Корм для животных",
+      "date": "2024-10-15",
+      "status": "completed"
+    },
+    {
+      "id": 2,
+      "userId": "anna_petrova",
+      "userName": "Анна Петрова Васильевна",
+      "userPhone": "+7 (495) 123-45-67",
+      "userEmail": "anna@example.com",
+      "amount": 1000,
+      "purpose": "Ветеринарное лечение",
+      "date": "2024-10-10",
+      "status": "completed"
+    },
+    {
+      "id": 3,
+      "userId": "anna_petrova",
+      "userName": "Анна Петрова Васильевна",
+      "userPhone": "+7 (495) 123-45-67",
+      "userEmail": "anna@example.com",
+      "amount": 500,
+      "purpose": "Содержание приюта",
+      "date": "2024-10-05",
+      "status": "completed"
+    },
+    {
+      "id": 4,
+      "userId": "anna_petrova",
+      "userName": "Анна Петрова Васильевна",
+      "userPhone": "+7 (495) 123-45-67",
+      "userEmail": "anna@example.com",
+      "amount": 300,
+      "purpose": "Корм для животных",
+      "date": "2024-10-01",
+      "status": "completed"
+    },
+    {
+      "id": 5,
+      "userId": "anna_petrova",
+      "userName": "Анна Петрова Васильевна",
+      "userPhone": "+7 (495) 123-45-67",
+      "userEmail": "anna@example.com",
+      "amount": 200,
+      "purpose": "Общие нужды",
+      "date": "2024-10-20",
+      "status": "completed"
+    },
+    {
+      "id": 6,
+      "userId": "user2",
+      "userName": "Иван Иванов",
+      "userPhone": "+7 (495) 234-56-78",
+      "userEmail": "ivan@example.com",
+      "amount": 1000,
+      "purpose": "Ветеринарное лечение",
+      "date": "2024-10-14",
+      "status": "completed"
+    },
+    {
+      "id": 7,
+      "userId": "user3",
+      "userName": "Мария Сидорова",
+      "userPhone": "+7 (495) 345-67-89",
+      "userEmail": "maria@example.com",
+      "amount": 500,
+      "purpose": "Корм для животных",
+      "date": "2024-10-12",
+      "status": "completed"
+    }
+  ]
+}
+

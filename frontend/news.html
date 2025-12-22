@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Новости и события - Дом Лап</title>
+    <link rel="stylesheet" href="css/style.css?v=2.1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/svg+xml" href="images/icon-192.svg">
+    <link rel="shortcut icon" href="images/icon-192.svg">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="index.html" class="logo" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
+                    <img src="images/logo.svg" alt="Дом Лап" class="logo-img">
+                    <span class="logo-text">Дом Лап</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link" data-translate="nav.home">Главная</a></li>
+                    <li><a href="animals.html" class="nav-link" data-translate="nav.animals">Наши животные</a></li>
+                    <li><a href="news.html" class="nav-link active" data-translate="nav.news">Новости</a></li>
+                    <li><a href="help.html" class="nav-link" data-translate="nav.help">Как помочь</a></li>
+                    <li><a href="about.html" class="nav-link" data-translate="nav.about">О приюте</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="lang-switcher" id="langSwitcher" title="Переключить язык" data-translate-title="common.language">RU</button>
+                    <button class="theme-switcher" id="themeSwitcher" title="Переключить тему"><span>☀️</span></button>
+                    <a href="donate.html" class="btn btn-primary" data-translate="nav.donate">Сделать пожертвование</a>
+                    <a href="profile.html" class="nav-link" data-translate="nav.profile">Личный кабинет</a>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title" data-translate="news.pageTitle">Новости и события</h1>
+            <p class="page-subtitle" data-translate="news.pageSubtitle">Следите за жизнью приюта и нашими успехами</p>
+        </div>
+    </section>
+
+    <!-- 
+        Блок "Подписка на рассылку" (Newsletter Subscription):
+        Форма для подписки на email-рассылку новостей приюта. Позволяет пользователям
+        получать уведомления о новых событиях, усыновлениях и новостях приюта.
+    -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2 data-translate="news.subscribe">Подпишитесь на рассылку</h2>
+                    <p data-translate="news.subscribeText">Получайте свежие новости о наших питомцах и событиях приюта</p>
+                </div>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" id="newsletterEmail" name="newsletterEmail" autocomplete="email" placeholder="" required>
+                    <button type="submit" class="btn btn-primary" data-translate="news.subscribeBtn">Подписаться</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+        Блок "Сетка новостей" (News Grid):
+        Основной раздел со всеми новостями приюта. Содержит карточки новостей с изображением,
+        датой, категорией, заголовком, кратким описанием и ссылкой на полную статью.
+        Первая новость выделена как главная (featured).
+    -->
+    <section class="news-section">
+        <div class="container">
+            <div class="news-grid" id="newsGrid">
+                <!-- Новости будут загружены динамически из базы данных -->
+            </div>
+
+            <!-- Кнопка загрузки дополнительных новостей -->
+            <div class="news-footer">
+                <button class="btn btn-secondary" id="loadMoreBtn" data-translate="news.loadMore">Загрузить еще</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+        Блок "Предстоящие события" (Events Section):
+        Календарь предстоящих мероприятий приюта. Показывает дату, название события,
+        описание, место и время проведения. Помогает пользователям узнать о мероприятиях
+        и принять в них участие.
+    -->
+    <section class="events-section">
+        <div class="container">
+            <h2 class="section-title" data-translate="news.eventsTitle">Предстоящие события</h2>
+            <div class="events-grid">
+                <!-- События будут загружены динамически из базы данных -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.svg" alt="Дом Лап" class="logo-img">
+                        <span class="logo-text">Дом Лап</span>
+                    </div>
+                    <p class="footer-description" data-translate="footer.description">
+                        Приют для животных, где каждое существо получает шанс на счастливую жизнь.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title" data-translate="footer.navigation">Навигация</h3>
+                    <ul class="footer-links">
+                        <li><a href="animals.html" data-translate="nav.animals">Наши животные</a></li>
+                        <li><a href="news.html" data-translate="nav.news">Новости</a></li>
+                        <li><a href="help.html" data-translate="nav.help">Как помочь</a></li>
+                        <li><a href="about.html" data-translate="nav.about">О приюте</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title" data-translate="footer.contacts">Контакты</h3>
+                    <div class="contact-info">
+                        <p>📞 +7 (495) 123-45-67</p>
+                        <p>📧 info@domlap.ru</p>
+                        <p>📍 Москва, ул. Добрая, д. 1</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title" data-translate="footer.social">Социальные сети</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">VK</a>
+                        <a href="#" class="social-link">Telegram</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-translate="footer.copyright">© 2024 Дом Лап. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- News Detail Modal with Slider -->
+    <div class="modal news-detail-modal" id="newsDetailModal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <button class="modal-close" onclick="closeNewsDetailModal()" data-translate-title="common.close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="news-detail-content">
+                    <div class="news-detail-main">
+                        <div class="news-detail-media">
+                        <div class="news-detail-image">
+                            <img id="newsDetailImage" src="" alt="News">
+                            </div>
+                            <button class="news-slider-btn news-slider-btn-prev" onclick="changeNews(-1)">‹</button>
+                            <button class="news-slider-btn news-slider-btn-next" onclick="changeNews(1)">›</button>
+                        </div>
+                        <div class="news-detail-info">
+                            <div class="news-detail-meta">
+                                <span id="newsDetailDate"></span>
+                                <span id="newsDetailCategory"></span>
+                            </div>
+                            <h2 id="newsDetailTitle"></h2>
+                            <div id="newsDetailContent" class="news-detail-text"></div>
+                        </div>
+                    </div>
+                    <div class="news-slider-dots" id="newsSliderDots"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Events Detail Modal with Slider -->
+    <div class="modal events-detail-modal" id="eventsDetailModal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <button class="modal-close" onclick="closeEventsDetailModal()" data-translate-title="common.close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="events-detail-content">
+                    <div class="events-slider-shell">
+                        <button class="events-slider-btn events-slider-btn-prev" onclick="changeEvent(-1)">‹</button>
+                    
+                    <div class="event-detail-main">
+                        <div class="event-detail-date">
+                            <span class="event-detail-day" id="eventDetailDay"></span>
+                            <span class="event-detail-month" id="eventDetailMonth"></span>
+                        </div>
+                        <div class="event-detail-info">
+                            <h2 id="eventDetailTitle"></h2>
+                            <p id="eventDetailDescription"></p>
+                            <div class="event-detail-meta" id="eventDetailMeta"></div>
+                        </div>
+                    </div>
+                    
+                        <button class="events-slider-btn events-slider-btn-next" onclick="changeEvent(1)">›</button>
+                    </div>
+
+                    <div class="events-slider-dots" id="eventsSliderDots"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/translations.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/news-db.js"></script>
+    <script src="js/events-db.js"></script>
+    <script src="js/news.js"></script>
+</body>
+</html>

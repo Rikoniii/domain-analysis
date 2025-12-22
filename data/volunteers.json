@@ -1,0 +1,117 @@
+{
+  "volunteers": [
+    {
+      "id": 1,
+      "name": "Анна Петрова Васильевна",
+      "nameEn": "Anna Petrova Vasilevna",
+      "phone": "+7 (495) 123-45-67",
+      "email": "anna@example.com",
+      "role": "Координатор волонтеров",
+      "roleEn": "Volunteer Coordinator",
+      "specialization": "Уход за животными, координация",
+      "specializationEn": "Animal care, coordination",
+      "joinDate": "2024-01-15",
+      "status": "active",
+      "avatar": "team1.svg"
+    },
+    {
+      "id": 2,
+      "name": "Иван Смирнов",
+      "nameEn": "Ivan Smirnov",
+      "phone": "+7 (495) 234-56-78",
+      "email": "ivan@example.com",
+      "role": "Ветеринарный помощник",
+      "roleEn": "Veterinary Assistant",
+      "specialization": "Медицинская помощь, лечение",
+      "specializationEn": "Medical assistance, treatment",
+      "joinDate": "2024-02-20",
+      "status": "active",
+      "avatar": "team2.svg"
+    },
+    {
+      "id": 3,
+      "name": "Мария Козлова",
+      "nameEn": "Maria Kozlova",
+      "phone": "+7 (495) 345-67-89",
+      "email": "maria@example.com",
+      "role": "Координатор усыновлений",
+      "roleEn": "Adoption Coordinator",
+      "specialization": "Работа с заявками, консультации",
+      "specializationEn": "Application processing, consultations",
+      "joinDate": "2024-03-10",
+      "status": "active",
+      "avatar": "team3.svg"
+    },
+    {
+      "id": 4,
+      "name": "Дмитрий Волков",
+      "nameEn": "Dmitry Volkov",
+      "phone": "+7 (495) 456-78-90",
+      "email": "dmitry@example.com",
+      "role": "Фотограф",
+      "roleEn": "Photographer",
+      "specialization": "Фотосъемка животных для сайта",
+      "specializationEn": "Animal photography for website",
+      "joinDate": "2024-04-05",
+      "status": "active",
+      "avatar": "team4.svg"
+    },
+    {
+      "id": 5,
+      "name": "Елена Новикова",
+      "nameEn": "Elena Novikova",
+      "phone": "+7 (495) 567-89-01",
+      "email": "elena@example.com",
+      "role": "Волонтер по выгулу",
+      "roleEn": "Walking Volunteer",
+      "specialization": "Выгул собак, физическая активность",
+      "specializationEn": "Dog walking, physical activity",
+      "joinDate": "2024-05-12",
+      "status": "active",
+      "avatar": "team1.svg"
+    },
+    {
+      "id": 6,
+      "name": "Сергей Морозов",
+      "nameEn": "Sergey Morozov",
+      "phone": "+7 (495) 678-90-12",
+      "email": "sergey@example.com",
+      "role": "Технический специалист",
+      "roleEn": "Technical Specialist",
+      "specialization": "Ремонт, техническое обслуживание",
+      "specializationEn": "Repairs, maintenance",
+      "joinDate": "2024-06-18",
+      "status": "active",
+      "avatar": "team2.svg"
+    },
+    {
+      "id": 7,
+      "name": "Ольга Лебедева",
+      "nameEn": "Olga Lebedeva",
+      "phone": "+7 (495) 789-01-23",
+      "email": "olga@example.com",
+      "role": "Воспитатель",
+      "roleEn": "Trainer",
+      "specialization": "Дрессировка, социализация",
+      "specializationEn": "Training, socialization",
+      "joinDate": "2024-07-25",
+      "status": "active",
+      "avatar": "team3.svg"
+    },
+    {
+      "id": 8,
+      "name": "Алексей Соколов",
+      "nameEn": "Alexey Sokolov",
+      "phone": "+7 (495) 890-12-34",
+      "email": "alexey@example.com",
+      "role": "Волонтер по уборке",
+      "roleEn": "Cleaning Volunteer",
+      "specialization": "Уборка помещений, гигиена",
+      "specializationEn": "Cleaning, hygiene",
+      "joinDate": "2024-08-30",
+      "status": "active",
+      "avatar": "team4.svg"
+    }
+  ]
+}
+
