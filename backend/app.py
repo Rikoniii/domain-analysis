@@ -81,7 +81,7 @@ def create_yoomoney_payment(
     """
     Создать платеж в YooMoney
     
-    ВАЖНО: Это упрощенная версия. В реальности нужно использовать официальный SDK YooMoney
+    Это упрощенная версия. В реальности нужно использовать официальный SDK YooMoney
     или делать HTTP запросы к их API согласно документации.
     
     Документация: https://yoomoney.ru/docs/payment-buttons/using-api/payment-process
